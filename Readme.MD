@@ -12,7 +12,7 @@ class ExpressionBodiedMethod
 }
 ```
 
-#### Note some new changes in syntax for C# 6.0
+#### Summary of changes in C# 6.0 syntax
 
 ```csharp
 /// <summary>
@@ -49,4 +49,21 @@ class Person
         return this?.Age; 
     }
 }
+```
+#### Firing events in C# 6.0
+
+In C# 5.0
+
+```csharp
+var handler = Event;
+if (handler != null)
+{
+	handler(source, e);
+}
+```
+
+In C# 6.0
+
+```csharp
+handler?.Invoke(source, e);
 ```
