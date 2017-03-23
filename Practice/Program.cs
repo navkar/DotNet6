@@ -19,6 +19,14 @@ namespace Practice
                 }
             }
 
+            Person p = new Person();
+            p.Age = 0;
+            WriteLine("This persons age is " + p.FindAge());
+
+            // Reverse a string
+            string reverse = StrUtil.ReverseString("I want to reverse this string");
+            WriteLine(reverse);
+            
             //Example();
 
             //string result = ReadLine();
