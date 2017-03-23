@@ -2,6 +2,8 @@
 
 This repository summarizes some developer productivity features of C# 6.0
 
+#### Summary of changes in C# 6.0 syntax
+
 ```csharp
 /// <summary>
 /// A method that includes just one statement can be written in lambda syntax.
@@ -12,7 +14,6 @@ class ExpressionBodiedMethod
 }
 ```
 
-#### Summary of changes in C# 6.0 syntax
 
 ```csharp
 /// <summary>
@@ -52,7 +53,7 @@ class Person
 ```
 #### Firing events in C# 6.0
 
-In C# 5.0
+##### In C# 5.0
 
 ```csharp
 var handler = Event;
@@ -62,8 +63,41 @@ if (handler != null)
 }
 ```
 
-In C# 6.0
+##### In C# 6.0
 
 ```csharp
 handler?.Invoke(source, e);
+```
+
+#### Exception filters in C# 6.0
+
+```csharp
+try
+{
+	// etc
+}
+catch(SomeException ex) when (ex.ErrorCode == 405)
+{
+	// write some handler here...
+}
+```
+
+#### String interpolation
+
+The string interpolation removes calls to `string.Format`. Instead of using 
+numbered format placeholders in the string, the placeholders can include expressions.
+
+##### In C# 5.0
+
+```csharp
+public override ToString()
+{
+	return string.Format("{0}, {1}", Title, Publisher);
+}
+```
+
+##### In C# 6.0
+
+```csharp
+public override ToString() => $"{Title}{Publisher}";
 ```
