@@ -19,8 +19,11 @@ namespace Practice
                 }
             }
 
-            Person p = new Person();
-            p.Age = 0;
+            Person p = new Person()
+            {
+                Age = 0
+            };
+
             WriteLine("This persons age is " + p.FindAge());
 
             // Reverse a string
