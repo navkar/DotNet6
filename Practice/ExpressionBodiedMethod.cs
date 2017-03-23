@@ -11,6 +11,6 @@ namespace Practice
     /// </summary>
     class ExpressionBodiedMethod
     {
-        public void PrintMe(string message) => Console.Write("message");
+        public void PrintMe(string message) => Console.Write(message);
     }
 }

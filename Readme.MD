@@ -10,7 +10,7 @@ This repository summarizes some developer productivity features of C# 6.0
 /// </summary>
 class ExpressionBodiedMethod
 {
-    public void PrintMe(string message) => Console.Write("message");
+    public void PrintMe(string message) => Console.Write(message);
 }
 ```
 
